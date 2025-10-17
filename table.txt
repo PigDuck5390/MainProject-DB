@@ -1,0 +1,33 @@
+*USERS TABLE*
+| 컬럼명              | 타입           | 의미 / 설명                                     
+| ------------------ | ------------- | ------------------------------------------- 
+| **USER_ID**        | NUMBER (PK)   | 사용자 고유 식별번호    
+| **USER_LOGIN_ID**  | VARCHAR2(50)  | 로그인용 사용자 ID      
+| **EMAIL**          | VARCHAR2(100) | 사용자의 이메일 주소                                 
+| **PASSWORD_HASH**  | VARCHAR2(200) | 비밀번호의 해시 값               
+| **ACCESS_KEY**     | VARCHAR2(100) | API 접근 토큰 / 인증키로 활용 가능             
+| **USER_DIRECTORY** | VARCHAR2(200) | 해당 사용자의 파일 저장 기본 경로 
+| **CREATED_AT**     | DATE          | 계정 생성 시각                  
+
+*FILES TABLE*
+| 컬럼명                     | 타입            | 의미 / 설명                                          
+| ------------------------- | ------------- | ------------------------------------------------ 
+| **FILE_ID**               | NUMBER (PK)   | 업로드된 파일의 고유 ID                   
+| **USER_ID**               | NUMBER (FK)   | 파일을 업로드한 사용자 ID              
+| **FILE_NAME**             | VARCHAR2(200) | 업로드된 파일 이름                    
+| **FILE_TYPE**             | VARCHAR2(50)  | 파일 확장자 또는 유형 
+| **FILE_DIRECTORY**        | VARCHAR2(300) | 파일이 저장된 서버 내 절대 또는 상대 경로  
+| **IS_TRANSFORM**          | NUMBER(1)     | 변환(OCR 등) 완료 여부       
+| **IS_CLASSIFICATION**     | NUMBER(1)     | AI 분류 완료 여부              
+| **HIDE**                  | NUMBER(1)     | 사용자 UI에서 숨김 여부                
+| **CLASSIFICATION_RESULT** | VARCHAR2(200) | 문서 분류 결과           
+| **UPLOADED_AT**           | DATE          | 업로드 시각      
+| **IS_SUMMARY**            | NUMBER(1)     | 요약 완료 여부
+
+*LOGS TABLE*
+| 컬럼명             | 타입          | 의미 / 설명                                              
+| --------------- | -------------- | ---------------------------------------------------- 
+| **LOG_ID**      | NUMBER (PK)    | 로그 고유 ID                         
+| **FILE_ID**     | NUMBER (FK)    | 어떤 파일에 대한 로그인지                   
+| **LOG_TIME**    | DATE           | 로그 기록 시각                         
+| **LOG_CONTENT** | VARCHAR2(1000) | 로그 내용 
