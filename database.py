@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "../../.env"))
 
 
-instant_client_path = r"c:../instantclient-basic-windows.x64-19.28.0.0.0dbru/instantclient_19_28"
+instant_client_path = r"c:../instantclient-basic-windows.x64-19.28.0.0.0dbru/instantclient_19_28"#경로설정
 if os.path.exists(instant_client_path):
     oracledb.init_oracle_client(lib_dir=instant_client_path)
 
