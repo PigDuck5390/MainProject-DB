@@ -15,6 +15,7 @@ database.py 11번째 줄 instantclient 경로 설정
 
 ## 테이블 관계
 
+<img width="691" height="664" alt="image" src="https://github.com/user-attachments/assets/159d5ff1-2add-4d69-981b-078b1cf56312" />
 
 
 
