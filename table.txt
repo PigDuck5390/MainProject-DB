@@ -6,7 +6,7 @@
 | **USER_PASSWORD**  | VARCHAR2(200) | 사용자 비밀번호               
 | **EMAIL**          | VARCHAR2(100) | API 접근 토큰 / 인증키로 활용 가능             
 | **CREATED_AT**     | DATE          | 계정 생성 시각                  
-| **ACCESS_KEY**     | VARCHAR2(100) | API 접근 토큰 / 인증키로 활용 가능
+| **ACCESS_KEY**     | VARCHAR2(300) | API 접근 토큰 / 인증키로 활용 가능
 | **LAST_WORK**      | DATE          | 마지막 작업
 
 *FILES TABLE*
